@@ -15,7 +15,7 @@ function searchAddressHandler(event: Event) {
   const enteredAddress = addressInput.value;
 
   // this is a very popular third party library: axios for sending http reqs
-  // has built in TS support, like in index.d.ts
+  // has built in TS support, like in index.d.ts which explains to ts what is going on here, basically.
   axios
     .get<GoogleGeocodingResponse>(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(
