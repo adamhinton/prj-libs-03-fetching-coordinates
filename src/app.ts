@@ -18,7 +18,7 @@ function searchAddressHandler(event: Event) {
   // has built in TS support, like in index.d.ts which explains to ts what is going on here, basically.
   // If you get good support and no errors then you probably don't need to install types. But if you get errors n' stuff, you probably need to install extra types.
   axios
-    .get<{ results: { geometry: { location: { lat: number; lng: number } } } }>(
+    .get<GoogleGeocodingResponse>(
       // we use template literal to import API key,
       // and to use the address the user entered.
       // encodeURI() is very helpful for these purposes
