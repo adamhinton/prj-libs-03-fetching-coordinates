@@ -19,6 +19,8 @@ function searchAddressHandler(event: Event) {
   // If you get good support and no errors then you probably don't need to install types. But if you get errors n' stuff, you probably need to install extra types.
   axios
     .get<GoogleGeocodingResponse>(
+      // we use template literal to import API key,
+      // and to use the address the user entered.
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(
         enteredAddress
       )}&key=${GOOGLE_API_KEY}`
