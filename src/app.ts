@@ -7,6 +7,7 @@ const GOOGLE_API_KEY = "AIzaSyCIaAc2c5M3VpbCH6PPq_guwy9lHuowXOs";
 
 type GoogleGeocodingResponse = {
   results: { geometry: { location: { lat: number; lng: number } } }[];
+  // expected status, tells us if the call succeeded or not
   status: "OK" | "ZERO_RESULTS";
 };
 
