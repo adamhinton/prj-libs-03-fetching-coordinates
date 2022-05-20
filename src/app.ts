@@ -21,6 +21,7 @@ function searchAddressHandler(event: Event) {
     .get<GoogleGeocodingResponse>(
       // we use template literal to import API key,
       // and to use the address the user entered.
+      // encodeURI() is very helpful for these purposes
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURI(
         enteredAddress
       )}&key=${GOOGLE_API_KEY}`
